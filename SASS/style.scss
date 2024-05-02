@@ -14,35 +14,43 @@ $light-grey-color: #EAEAEA;
 $body-background: #F6F6F6;
 
 @mixin shadow {
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+@mixin display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin button-gradient {
+    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    border-radius: 50px;
 }
 
 body {
     max-width: 375px;
     font-family: $main-font-family;
-    background: $body-background;
+}
+a {
+    text-decoration: none;
 }
 
 //********** Header **********//
 .container__header {
     @include shadow;
+    position: relative;
 
     .container-logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display;
+        @include shadow;
         position: relative;
         height: 63px;
-        @include shadow;
         .logo {
             width: 197px;
             height: 36px;
         }
     }
     .container__localisation {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display;
         gap: 20px;
         height: 50px;
         background: $light-grey-color;
@@ -54,5 +62,39 @@ body {
             font-size: 16px;
             font-weight: 500;
         }
+    }
+}
+
+//********** Section title **********//
+.container__presentation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 30px 30px 50px;
+    background: $body-background;
+
+    .presentation-title {
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+    .presentation-txt {
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .container__presentation-link {
+        @include button-gradient;
+        @include display;
+        height: 50px;
+        margin: 0 50px;
+        filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));
+        cursor: pointer;
+        .presentation-link {
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+    }
+    .container__presentation-link:hover {
+        filter: brightness(1.2);
     }
 }
