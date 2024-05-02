@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$main-font-family: "Roboto", sans-serif;
+$secondary-font-family: "Shrikhand", serif;
+
+$main-color: #9356DC;
+$dark-grey-color: #353535;
+$grey-color: #7E7E7E;
+$light-grey-color: #EAEAEA;
+$body-background: #F6F6F6;
+
+@mixin shadow {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+body {
+    max-width: 375px;
+    font-family: $main-font-family;
+    background: $body-background;
+}
+
+//********** Header **********//
+.container__header {
+    @include shadow;
+
+    .container-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 63px;
+        @include shadow;
+        .logo {
+            width: 197px;
+            height: 36px;
+        }
+    }
+    .container__localisation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 50px;
+        background: $light-grey-color;
+        .fa-location-dot {
+            color: $dark-grey-color;
+        }
+        .txt-localisation {
+            color: $dark-grey-color;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
