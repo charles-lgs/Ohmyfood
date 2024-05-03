@@ -1,3 +1,5 @@
+// sass --watch SASS/style.scss:assets/style.css
+
 * {
     margin: 0;
     padding: 0;
@@ -11,10 +13,13 @@ $main-color: #9356DC;
 $dark-grey-color: #353535;
 $grey-color: #7E7E7E;
 $light-grey-color: #EAEAEA;
-$body-background: #F6F6F6;
+$background: #F6F6F6;
 
-@mixin shadow {
+@mixin shadow-header {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+@mixin shadow-card {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 @mixin display {
     display: flex;
@@ -24,6 +29,22 @@ $body-background: #F6F6F6;
 @mixin button-gradient {
     background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
     border-radius: 50px;
+}
+@mixin card-etape {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 30px;
+    height: 72px;
+    border-radius: 20px;
+}
+@mixin card-etape-before {
+    position: absolute;
+    left: 20px;
+    height: 24px;
+    width: 24px;
+    color: #FFFFFF;
+    border-radius: 24px;
 }
 
 body {
@@ -36,12 +57,12 @@ a {
 
 //********** Header **********//
 .container__header {
-    @include shadow;
+    @include shadow-header;
     position: relative;
 
     .container-logo {
         @include display;
-        @include shadow;
+        @include shadow-header;
         position: relative;
         height: 63px;
         .logo {
@@ -72,7 +93,7 @@ a {
     text-align: center;
     gap: 30px;
     padding: 30px 30px 50px;
-    background: $body-background;
+    background: $background;
 
     .presentation-title {
         padding: 0 20px;
@@ -81,6 +102,7 @@ a {
     .presentation-txt {
         font-size: 18px;
         font-weight: 300;
+        color: $dark-grey-color;
     }
     .container__presentation-link {
         @include button-gradient;
@@ -96,5 +118,72 @@ a {
     }
     .container__presentation-link:hover {
         filter: brightness(1.2);
+    }
+}
+
+//********** Section fonctionnement **********//
+.container-fonctionnement {
+    padding: 50px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .container-etapes {
+        display: flex;
+        flex-direction: column;
+        padding-left: 12px;
+        gap: 30px;
+
+        .card-etape-one {
+            @include shadow-card;
+            @include card-etape;
+            background: $background;
+            .fa-mobile-screen-button {
+                color: $grey-color;
+            }
+            .etape-title {
+                font-size: 16px;
+            }
+        }
+        .card-etape-one::before {
+            @include display;
+            @include card-etape-before;
+            content: "1";
+            background: $main-color;
+        }
+        .card-etape-two {
+            @include shadow-card;
+            @include card-etape;
+            background: $background;
+            .fa-list-ul {
+                color: $grey-color;
+            }
+            .etape-title {
+                font-size: 16px;
+            }
+        }
+        .card-etape-two::before {
+            @include display;
+            @include card-etape-before;
+            content: "2";
+            background: $main-color;
+        }
+        .card-etape-three {
+            @include shadow-card;
+            @include card-etape;
+            background: $background;
+            .fa-store {
+                color: $main-color;
+            }
+            .etape-title {
+                font-size: 16px;
+            }
+        }
+        .card-etape-three::before {
+            @include display;
+            @include card-etape-before;
+            content: "3";
+            background: $main-color;
+        }
     }
 }
