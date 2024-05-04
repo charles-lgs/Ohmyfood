@@ -9,11 +9,13 @@
 $main-font-family: "Roboto", sans-serif;
 $secondary-font-family: "Shrikhand", serif;
 
+$background: #F6F6F6;
 $main-color: #9356DC;
 $dark-grey-color: #353535;
 $grey-color: #7E7E7E;
 $light-grey-color: #EAEAEA;
-$background: #F6F6F6;
+$green-color: #008766;
+$light-green-color: #99E2D0;
 
 @mixin shadow-header {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
@@ -53,6 +55,7 @@ body {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 //********** Header **********//
@@ -186,4 +189,65 @@ a {
             background: $main-color;
         }
     }
+}
+
+//********** Section restaurants **********//
+.container__restaurants {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 50px 20px 50px;
+    background: $background;
+
+    .container__cards-restaurants{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .card-restaurant {
+            border-radius: 15px;
+            background: #FFFFFF;
+            height: 251px;
+            .img-restaurant {
+                object-fit: cover;
+                width: 100%;
+                height: 68%;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+            .img-position-bottom {
+                object-position: bottom;
+            }
+            .container__presentation-restaurant {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 32%;
+                padding: 0 20px 5px 10px;
+                .presentation-restaurant-title {
+                    margin-bottom: 5px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                .presentation-restaurant-txt {
+                    font-size: 17px;
+                    font-weight: 300;
+                }
+            }
+        }
+        .card-restaurant::before {
+            @include display;
+            content: "Nouveau";
+            position: absolute;
+            margin: 15px 0 0 240px;
+            border-radius: 2px;
+            width: 80px;
+            height: 29px;
+            font-size: 14px;
+            font-weight: 500;
+            color: $green-color;
+            background: $light-green-color;
+        }
+    }
+
 }

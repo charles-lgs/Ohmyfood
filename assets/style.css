@@ -11,6 +11,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .container__header {
@@ -180,6 +181,65 @@ a {
   border-radius: 24px;
   content: "3";
   background: #9356DC;
+}
+
+.container__restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 50px 20px 50px;
+  background: #F6F6F6;
+}
+.container__restaurants .container__cards-restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container__restaurants .container__cards-restaurants .card-restaurant {
+  border-radius: 15px;
+  background: #FFFFFF;
+  height: 251px;
+}
+.container__restaurants .container__cards-restaurants .card-restaurant .img-restaurant {
+  object-fit: cover;
+  width: 100%;
+  height: 68%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.container__restaurants .container__cards-restaurants .card-restaurant .img-position-bottom {
+  object-position: bottom;
+}
+.container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32%;
+  padding: 0 20px 5px 10px;
+}
+.container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant .presentation-restaurant-title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant .presentation-restaurant-txt {
+  font-size: 17px;
+  font-weight: 300;
+}
+.container__restaurants .container__cards-restaurants .card-restaurant::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Nouveau";
+  position: absolute;
+  margin: 15px 0 0 240px;
+  border-radius: 2px;
+  width: 80px;
+  height: 29px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+  background: #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */
