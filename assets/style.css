@@ -195,38 +195,38 @@ a {
   flex-direction: column;
   gap: 20px;
 }
-.container__restaurants .container__cards-restaurants .card-restaurant {
+.container__restaurants .container__cards-restaurants .card-restaurant-new, .container__restaurants .container__cards-restaurants .card-restaurant {
   border-radius: 15px;
   background: #FFFFFF;
   height: 251px;
 }
-.container__restaurants .container__cards-restaurants .card-restaurant .img-restaurant {
+.container__restaurants .container__cards-restaurants .card-restaurant-new .img-restaurant, .container__restaurants .container__cards-restaurants .card-restaurant .img-restaurant {
   object-fit: cover;
   width: 100%;
   height: 68%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.container__restaurants .container__cards-restaurants .card-restaurant .img-position-bottom {
+.container__restaurants .container__cards-restaurants .card-restaurant-new .img-position-bottom, .container__restaurants .container__cards-restaurants .card-restaurant .img-position-bottom {
   object-position: bottom;
 }
-.container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant {
+.container__restaurants .container__cards-restaurants .card-restaurant-new .container__presentation-restaurant, .container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 32%;
   padding: 0 20px 5px 10px;
 }
-.container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant .presentation-restaurant-title {
+.container__restaurants .container__cards-restaurants .card-restaurant-new .container__presentation-restaurant .presentation-restaurant-title, .container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant .presentation-restaurant-title {
   margin-bottom: 5px;
   font-size: 18px;
   font-weight: 700;
 }
-.container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant .presentation-restaurant-txt {
+.container__restaurants .container__cards-restaurants .card-restaurant-new .container__presentation-restaurant .presentation-restaurant-txt, .container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant .presentation-restaurant-txt {
   font-size: 17px;
   font-weight: 300;
 }
-.container__restaurants .container__cards-restaurants .card-restaurant::before {
+.container__restaurants .container__cards-restaurants .card-restaurant-new::before {
   display: flex;
   justify-content: center;
   align-items: center;
