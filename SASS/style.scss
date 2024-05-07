@@ -57,6 +57,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+ul {
+    list-style: none;
+}
 
 //********** Header **********//
 .container__header {
@@ -250,4 +253,25 @@ a {
         }
     }
 
+}
+
+//********** Section footer **********//
+.container__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: $dark-grey-color;
+    padding: 30px;
+
+    &-links {
+        color: #FFFFFF;
+
+        .footer-link {
+            margin-bottom: 10px;
+            .fa-utensils, .fa-handshake-angle {
+                margin-right: 10px;
+                width: 11px;
+            }
+        }
+    }
 }

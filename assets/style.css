@@ -14,6 +14,10 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
 .container__header {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
   position: relative;
@@ -240,6 +244,24 @@ a {
   font-weight: 500;
   color: #008766;
   background: #99E2D0;
+}
+
+.container__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #353535;
+  padding: 30px;
+}
+.container__footer-links {
+  color: #FFFFFF;
+}
+.container__footer-links .footer-link {
+  margin-bottom: 10px;
+}
+.container__footer-links .footer-link .fa-utensils, .container__footer-links .footer-link .fa-handshake-angle {
+  margin-right: 10px;
+  width: 11px;
 }
 
 /*# sourceMappingURL=style.css.map */
