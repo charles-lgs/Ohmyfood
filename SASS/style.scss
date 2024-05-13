@@ -36,13 +36,15 @@ $light-green-color: #99E2D0;
     display: flex;
     align-items: center;
     gap: 30px;
+    position: relative;
     padding-left: 30px;
+    width: 335px;
     height: 72px;
     border-radius: 20px;
 }
 @mixin card-etape-before {
     position: absolute;
-    left: 20px;
+    left: -12px;
     height: 24px;
     width: 24px;
     color: #FFFFFF;
@@ -50,8 +52,17 @@ $light-green-color: #99E2D0;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+}
+.main-container {
     max-width: 375px;
     font-family: $main-font-family;
+
+    @media screen and (min-width: 377px) and (max-width: 1920px) {
+        max-width: 1440px;
+        width: 100%;
+    }
 }
 a {
     text-decoration: none;
@@ -93,11 +104,15 @@ ul {
             font-weight: 500;
         }
     }
+    @media screen and (min-width: 377px) and (max-width: 1920px) {
+        
+    }
 }
 
 //********** Section title **********//
 .container__presentation {
     display: flex;
+    align-items: center;
     flex-direction: column;
     text-align: center;
     gap: 30px;
@@ -117,7 +132,7 @@ ul {
         @include button-gradient;
         @include display;
         height: 50px;
-        margin: 0 50px;
+        width: 218px;
         filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));
         cursor: pointer;
         .presentation-link {
@@ -128,17 +143,27 @@ ul {
     .container__presentation-link:hover {
         filter: brightness(1.2);
     }
+    @media screen and (min-width: 377px) and (max-width: 1920px) {
+        .presentation-title {
+            font-size: 40px;
+        }
+    }
 }
 
 //********** Section fonctionnement **********//
 .container-fonctionnement {
-    padding: 50px 20px 50px;
+    padding: 50px 10px 50px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 40px;
-
+    
+    .fonctionnement-title {
+        padding-left: 10px;
+    }
     .container-etapes {
         display: flex;
+        align-items: center;
         flex-direction: column;
         padding-left: 12px;
         gap: 30px;
@@ -193,6 +218,16 @@ ul {
             @include card-etape-before;
             content: "3";
             background: $main-color;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+        .container-etapes {
+            flex-direction: row;
+            justify-content: center;
+            padding: 0;
+        }
+        .fonctionnement-title {
+            padding-left: 170px;
         }
     }
 }
@@ -274,6 +309,9 @@ ul {
             .fa-utensils, .fa-handshake-angle {
                 margin-right: 10px;
                 width: 11px;
+            }
+            .fa-solid {
+                color: #FFFFFF;
             }
         }
     }
