@@ -65,6 +65,15 @@ ul {
   font-size: 16px;
   font-weight: 500;
 }
+@media screen and (min-width: 377px) and (max-width: 1920px) {
+  .container__header {
+    box-shadow: none;
+  }
+  .container__header .container-logo {
+    box-shadow: none;
+  }
+}
+
 .container__presentation {
   display: flex;
   align-items: center;
@@ -241,6 +250,7 @@ ul {
   gap: 20px;
 }
 .container__restaurants .container__cards-restaurants .card-restaurant-new, .container__restaurants .container__cards-restaurants .card-restaurant {
+  position: relative;
   border-radius: 15px;
   background: #FFFFFF;
   height: 251px;
@@ -251,9 +261,6 @@ ul {
   height: 68%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-}
-.container__restaurants .container__cards-restaurants .card-restaurant-new .img-position-bottom, .container__restaurants .container__cards-restaurants .card-restaurant .img-position-bottom {
-  object-position: bottom;
 }
 .container__restaurants .container__cards-restaurants .card-restaurant-new .container__presentation-restaurant, .container__restaurants .container__cards-restaurants .card-restaurant .container__presentation-restaurant {
   display: flex;
@@ -277,7 +284,8 @@ ul {
   align-items: center;
   content: "Nouveau";
   position: absolute;
-  margin: 15px 0 0 240px;
+  left: 240px;
+  top: 15px;
   border-radius: 2px;
   width: 80px;
   height: 29px;
@@ -285,6 +293,26 @@ ul {
   font-weight: 500;
   color: #008766;
   background: #99E2D0;
+}
+@media screen and (min-width: 1110px) and (max-width: 1920px) {
+  .container__restaurants {
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 30px 552px;
+    gap: 50px;
+  }
+  .container__restaurants .container__cards-restaurants {
+    max-width: 1080px;
+    min-width: 1080px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 50px;
+    column-gap: 100px;
+  }
+  .container__restaurants .container__cards-restaurants .card-restaurant-new::before {
+    left: 395px;
+  }
 }
 
 .container__footer {
@@ -306,6 +334,21 @@ ul {
 }
 .container__footer-links .footer-link .fa-solid {
   color: #FFFFFF;
+}
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  .container__footer {
+    flex-direction: row-reverse;
+    gap: 60px;
+    padding-top: 50px;
+  }
+  .container__footer .container__footer-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .container__footer .container__footer-links .footer-link {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

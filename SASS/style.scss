@@ -105,7 +105,11 @@ ul {
         }
     }
     @media screen and (min-width: 377px) and (max-width: 1920px) {
-        
+        box-shadow: none;
+
+        .container-logo {
+            box-shadow: none;
+        }
     }
 }
 
@@ -246,18 +250,17 @@ ul {
         gap: 20px;
 
         .card-restaurant-new, .card-restaurant {
+            position: relative;
             border-radius: 15px;
             background: #FFFFFF;
             height: 251px;
+
             .img-restaurant {
                 object-fit: cover;
                 width: 100%;
                 height: 68%;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
-            }
-            .img-position-bottom {
-                object-position: bottom;
             }
             .container__presentation-restaurant {
                 display: flex;
@@ -280,7 +283,8 @@ ul {
             @include display;
             content: "Nouveau";
             position: absolute;
-            margin: 15px 0 0 240px;
+            left: 240px;
+            top: 15px;
             border-radius: 2px;
             width: 80px;
             height: 29px;
@@ -290,7 +294,25 @@ ul {
             background: $light-green-color;
         }
     }
+    @media screen and (min-width: 1110px) and (max-width: 1920px) {
+        justify-content: center;
+        display: grid;
+        grid-template-rows: 30px 552px;
+        gap: 50px;
 
+        .container__cards-restaurants {
+            max-width: 1080px;
+            min-width: 1080px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            row-gap: 50px;
+            column-gap: 100px;
+            .card-restaurant-new::before {
+                left: 395px;
+            }
+        }
+    }
 }
 
 //********** Section footer **********//
@@ -312,6 +334,20 @@ ul {
             }
             .fa-solid {
                 color: #FFFFFF;
+            }
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+        flex-direction: row-reverse;
+        gap: 60px;
+        padding-top: 50px;
+
+        .container__footer-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .footer-link {
+                margin-bottom: 0;
             }
         }
     }
