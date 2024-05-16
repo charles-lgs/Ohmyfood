@@ -9,12 +9,12 @@ body {
   justify-content: center;
 }
 
-.main-container {
+.main__container {
   max-width: 375px;
   font-family: "Roboto", sans-serif;
 }
 @media screen and (min-width: 377px) and (max-width: 1920px) {
-  .main-container {
+  .main__container {
     max-width: 1440px;
     width: 100%;
   }
@@ -349,6 +349,23 @@ ul {
   .container__footer .container__footer-links .footer-link {
     margin-bottom: 0;
   }
+}
+
+.restaurant__container-header {
+  display: flex;
+  align-items: center;
+  height: 63px;
+}
+.restaurant__container-header .restaurant__container-link {
+  position: absolute;
+  left: 20px;
+}
+.restaurant__container-header .restaurant__container-link .fa-arrow-left {
+  color: #353535;
+}
+.restaurant__container-header .restaurant__container-logo .restaurant-logo {
+  width: 197px;
+  height: 36px;
 }
 
 /*# sourceMappingURL=style.css.map */

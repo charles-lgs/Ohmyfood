@@ -55,7 +55,7 @@ body {
     display: flex;
     justify-content: center;
 }
-.main-container {
+.main__container {
     max-width: 375px;
     font-family: $main-font-family;
 
@@ -349,6 +349,30 @@ ul {
             .footer-link {
                 margin-bottom: 0;
             }
+        }
+    }
+}
+
+//******************** Restaurant pages ********************//
+
+//********** Restaurant header **********//
+.restaurant__container-header {
+    display: flex;
+    align-items: center;
+    height: 63px;
+
+    .restaurant__container-link {
+        position: absolute;
+        left: 20px;
+
+        .fa-arrow-left {
+            color: $dark-grey-color;
+        }
+    }
+    .restaurant__container-logo {
+        .restaurant-logo {
+            width: 197px;
+            height: 36px;
         }
     }
 }
