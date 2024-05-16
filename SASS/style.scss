@@ -109,6 +109,7 @@ ul {
 
         .container-logo {
             box-shadow: none;
+            height: 96px;
         }
     }
 }
@@ -355,13 +356,25 @@ ul {
 
 //******************** Restaurant pages ********************//
 
+.restaurant__main-container {
+    max-width: 375px;
+
+    @media screen and (min-width: 377px) and (max-width: 1920px) {
+        max-width: 1440px;
+        width: 100%;
+    }
+}
+
 //********** Restaurant header **********//
 .restaurant__container-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 63px;
 
     .restaurant__container-link {
+        // position: relative;
+        // left: -60px;
         position: absolute;
         left: 20px;
 
@@ -374,5 +387,24 @@ ul {
             width: 197px;
             height: 36px;
         }
+    }
+    @media screen and (min-width: 377px) and (max-width: 1920px) {
+        height: 96px;
+    }
+    @media screen and (min-width: 1441px) and (max-width: 1920px) {
+        .restaurant__container-link {
+            left: 260px;
+        }
+    }
+}
+
+//********** Section image **********//
+.restaurant__container-image {
+    .restaurant-image {
+        height: 275px;
+        width: 375px;
+        object-fit: cover;
+        box-sizing: content-box;
+        width: 100%;
     }
 }
