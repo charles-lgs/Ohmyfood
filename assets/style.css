@@ -397,5 +397,40 @@ ul {
   box-sizing: content-box;
   width: 100%;
 }
+@media screen and (min-width: 377px) and (max-width: 1920px) {
+  .restaurant__container-image .restaurant-image {
+    height: 383px;
+  }
+}
+
+.restaurant__container-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px;
+  background: #F6F6F6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.restaurant__container-menu .restaurant__container-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.restaurant__container-menu .restaurant__container-title .restaurant-title {
+  font-family: "Shrikhand", serif;
+  font-style: oblique 10deg;
+  font-size: 28px;
+  color: #101010;
+}
+@media screen and (min-width: 1439px) and (max-width: 1920px) {
+  .restaurant__container-menu {
+    max-width: 1055px;
+    left: 193px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

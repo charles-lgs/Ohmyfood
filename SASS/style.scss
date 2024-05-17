@@ -373,8 +373,6 @@ ul {
     height: 63px;
 
     .restaurant__container-link {
-        // position: relative;
-        // left: -60px;
         position: absolute;
         left: 20px;
 
@@ -406,5 +404,37 @@ ul {
         object-fit: cover;
         box-sizing: content-box;
         width: 100%;
+    }
+    @media screen and (min-width: 377px) and (max-width: 1920px) {
+        .restaurant-image {
+            height: 383px;
+        }
+    }
+}
+
+//********** Section menu **********//
+.restaurant__container-menu {
+    @include display;
+    position: relative;
+    top: -50px;
+    background: $background;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    .restaurant__container-title {
+        @include display;
+        gap: 30px;
+        margin-top: 30px;
+
+        .restaurant-title {
+            font-family: $secondary-font-family;
+            font-style: oblique 10deg;
+            font-size: 28px;
+            color: #101010;
+        }
+    }
+    @media screen and (min-width: 1439px) and (max-width: 1920px) {
+        max-width: 1055px;
+        left: 193px;
     }
 }
