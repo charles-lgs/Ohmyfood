@@ -50,6 +50,17 @@ $light-green-color: #99E2D0;
     color: #FFFFFF;
     border-radius: 24px;
 }
+@mixin card-check {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: $light-green-color;
+    height: 100%;
+    width: 59px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: 0.5s ease-in 0s reverse both running;
+}
 
 body {
     display: flex;
@@ -415,6 +426,8 @@ ul {
 //********** Section menu **********//
 .restaurant__container-menu {
     @include display;
+    font-family: $main-font-family;
+    flex-direction: column;
     position: relative;
     top: -50px;
     background: $background;
@@ -437,4 +450,101 @@ ul {
         max-width: 1055px;
         left: 193px;
     }
+    
+    .restaurant__container_menu-all {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+
+        .restaurant__container_menu-title {
+
+            .restaurant__menu-title {
+                font-size: 16px;
+            }
+            .restaurant__menu-line {
+                width: 40px;
+                height: 3px;
+                background: $light-green-color;
+                margin-top: 10px;
+            }
+        }
+        .restaurant__container_menu-all-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .restaurant__container_menu-card {
+                @include shadow-card;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 349px;
+                height: 69px;
+                border-radius: 15px;
+                background: #FFFFFF;
+
+                .restaurant__container_menu-info {
+                    margin-left: 10px;
+
+                    .restaurant__container_menu-info-title {
+                        font-size: 18px;
+                    }
+                    .restaurant__container_menu-info-txt {
+                        font-size: 15px;
+                    }
+                }
+
+                .restaurant__container_menu-price {
+                    margin-right: 10px;
+                    margin-left: 30px;
+                    margin-top: 25px;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: $dark-grey-color;
+                }
+
+                .restaurant__container_menu--check-one {
+                    @include card-check;
+                    .fa-circle-check {
+                        color: #FFFFFF;
+                    }
+                }
+                .restaurant__container_menu--check-two {
+                    @include card-check;
+                    .fa-circle-check {
+                        color: #FFFFFF;
+                    }
+                }
+                .restaurant__container_menu--check-three {
+                    @include card-check;
+                    .fa-circle-check {
+                        color: #FFFFFF;
+                    }
+                }
+                .check-on {
+                    animation-name: checkon;
+                }
+            }
+            @media screen and (min-width: 1439px) and (max-width: 1920px) {
+                .restaurant__container_menu-card {
+                    width: 634px;
+                }
+            }
+        }
+        @media screen and (min-width: 1439px) and (max-width: 1920px) {
+            max-width: 634px;
+        }
+    }
+    @keyframes checkon {
+        from {
+            width: 59px;
+            opacity: 1;
+        }
+        to {
+            width: 0;
+            opacity: 0; 
+        }
+    }      
 }
