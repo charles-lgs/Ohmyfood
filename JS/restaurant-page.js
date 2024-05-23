@@ -8,9 +8,22 @@ const menuCheckTwo = document.querySelector(
 const menuCheckThree = document.querySelector(
   ".restaurant__container_menu--check-three"
 );
+const menuCheckDishesOne = document.querySelector(
+  ".restaurant__container_menu--check-dishes-one"
+);
+const menuCheckDishesTwo = document.querySelector(
+  ".restaurant__container_menu--check-dishes-two"
+);
+const menuCheckDishesThree = document.querySelector(
+  ".restaurant__container_menu--check-dishes-three"
+);
+
 const checkEntranceOne = document.getElementById("check__entrance-one");
 const checkEntranceTwo = document.getElementById("check__entrance-two");
 const checkEntranceThree = document.getElementById("check__entrance-three");
+const checkDishesOne = document.getElementById("check__dishes-one");
+const checkDishesTwo = document.getElementById("check__dishes-two");
+const checkDishesThree = document.getElementById("check__dishes-three");
 
 heart.addEventListener("click", (e) => {
   e.preventDefault();
@@ -50,5 +63,41 @@ checkEntranceThree.addEventListener("click", (e) => {
   } else {
     menuCheckThree.style.display = "flex";
     menuCheckThree.classList.add("check-on");
+  }
+});
+
+checkDishesOne.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (menuCheckDishesOne.style.display === "flex") {
+    menuCheckDishesOne.classList.remove("check-on");
+    menuCheckDishesOne.style.display = "none";
+  } else {
+    menuCheckDishesOne.style.display = "flex";
+    menuCheckDishesOne.classList.add("check-on");
+  }
+});
+
+checkDishesTwo.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (menuCheckDishesTwo.style.display === "flex") {
+    menuCheckDishesTwo.classList.remove("check-on");
+    menuCheckDishesTwo.style.display = "none";
+  } else {
+    menuCheckDishesTwo.style.display = "flex";
+    menuCheckDishesTwo.classList.add("check-on");
+  }
+});
+
+checkDishesThree.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (menuCheckDishesThree.style.display === "flex") {
+    menuCheckDishesThree.classList.remove("check-on");
+    menuCheckDishesThree.style.display = "none";
+  } else {
+    menuCheckDishesThree.style.display = "flex";
+    menuCheckDishesThree.classList.add("check-on");
   }
 });
