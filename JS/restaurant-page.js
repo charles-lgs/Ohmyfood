@@ -17,6 +17,15 @@ const menuCheckDishesTwo = document.querySelector(
 const menuCheckDishesThree = document.querySelector(
   ".restaurant__container_menu--check-dishes-three"
 );
+const menuCheckDessertsOne = document.querySelector(
+  ".restaurant__container_menu--check-desserts-one"
+);
+const menuCheckDessertsTwo = document.querySelector(
+  ".restaurant__container_menu--check-desserts-two"
+);
+const menuCheckDessertsThree = document.querySelector(
+  ".restaurant__container_menu--check-desserts-three"
+);
 
 const checkEntranceOne = document.getElementById("check__entrance-one");
 const checkEntranceTwo = document.getElementById("check__entrance-two");
@@ -24,6 +33,9 @@ const checkEntranceThree = document.getElementById("check__entrance-three");
 const checkDishesOne = document.getElementById("check__dishes-one");
 const checkDishesTwo = document.getElementById("check__dishes-two");
 const checkDishesThree = document.getElementById("check__dishes-three");
+const checkDessertsOne = document.getElementById("check__desserts-one");
+const checkDessertsTwo = document.getElementById("check__desserts-two");
+const checkDessertsThree = document.getElementById("check__desserts-three");
 
 heart.addEventListener("click", (e) => {
   e.preventDefault();
@@ -99,5 +111,41 @@ checkDishesThree.addEventListener("click", (e) => {
   } else {
     menuCheckDishesThree.style.display = "flex";
     menuCheckDishesThree.classList.add("check-on");
+  }
+});
+
+checkDessertsOne.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (menuCheckDessertsOne.style.display === "flex") {
+    menuCheckDessertsOne.classList.remove("check-on");
+    menuCheckDessertsOne.style.display = "none";
+  } else {
+    menuCheckDessertsOne.style.display = "flex";
+    menuCheckDessertsOne.classList.add("check-on");
+  }
+});
+
+checkDessertsTwo.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (menuCheckDessertsTwo.style.display === "flex") {
+    menuCheckDessertsTwo.classList.remove("check-on");
+    menuCheckDessertsTwo.style.display = "none";
+  } else {
+    menuCheckDessertsTwo.style.display = "flex";
+    menuCheckDessertsTwo.classList.add("check-on");
+  }
+});
+
+checkDessertsThree.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (menuCheckDessertsThree.style.display === "flex") {
+    menuCheckDessertsThree.classList.remove("check-on");
+    menuCheckDessertsThree.style.display = "none";
+  } else {
+    menuCheckDessertsThree.style.display = "flex";
+    menuCheckDessertsThree.classList.add("check-on");
   }
 });
