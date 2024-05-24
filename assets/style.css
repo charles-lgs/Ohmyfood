@@ -410,17 +410,13 @@ ul {
   font-family: "Roboto", sans-serif;
   flex-direction: column;
   position: relative;
-  top: -50px;
   background: #F6F6F6;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
 }
 .restaurant__container-menu .restaurant__container-title {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 30px;
 }
 .restaurant__container-menu .restaurant__container-title .restaurant-title {
   font-family: "Shrikhand", serif;
@@ -466,6 +462,7 @@ ul {
   background: #FFFFFF;
 }
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info {
+  overflow-x: hidden;
   margin-left: 10px;
 }
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info .restaurant__container_menu-info-title {
@@ -566,6 +563,48 @@ ul {
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-dishes-three .fa-circle-check {
   color: #FFFFFF;
 }
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-one {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  height: 100%;
+  width: 59px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: 0.5s ease-in 0s reverse both running;
+}
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-one .fa-circle-check {
+  color: #FFFFFF;
+}
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-two {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  height: 100%;
+  width: 59px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: 0.5s ease-in 0s reverse both running;
+}
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-two .fa-circle-check {
+  color: #FFFFFF;
+}
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-three {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  height: 100%;
+  width: 59px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: 0.5s ease-in 0s reverse both running;
+}
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-three .fa-circle-check {
+  color: #FFFFFF;
+}
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .check-on {
   animation-name: checkon;
 }
@@ -579,6 +618,23 @@ ul {
     max-width: 634px;
   }
 }
+.restaurant__container-menu .restaurant__container-menu-link {
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 186px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));
+  cursor: pointer;
+}
+.restaurant__container-menu .restaurant__container-menu-link .menu-link {
+  color: #FFFFFF;
+  font-weight: 500;
+}
 @keyframes checkon {
   from {
     width: 59px;
@@ -587,6 +643,22 @@ ul {
   to {
     width: 0;
     opacity: 0;
+  }
+}
+
+.restaurant__container-menu::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 375px;
+  top: -50px;
+  background: #F6F6F6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+@media screen and (min-width: 1439px) and (max-width: 1920px) {
+  .restaurant__container-menu::before {
+    width: 1055px;
   }
 }
 
