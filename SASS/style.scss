@@ -501,61 +501,13 @@ ul {
                     font-weight: 700;
                     color: $dark-grey-color;
                 }
-
-                .restaurant__container_menu--check-one {
+                .restaurant__container_menu-check {
                     @include card-check;
                     .fa-circle-check {
                         color: #FFFFFF;
                     }
                 }
-                .restaurant__container_menu--check-two {
-                    @include card-check;
-                    .fa-circle-check {
-                        color: #FFFFFF;
-                    }
-                }
-                .restaurant__container_menu--check-three {
-                    @include card-check;
-                    .fa-circle-check {
-                        color: #FFFFFF;
-                    }
-                }
-                .restaurant__container_menu--check-dishes-one {
-                    @include card-check;
-                    .fa-circle-check {
-                        color: #FFFFFF;
-                    }
-                }
-                .restaurant__container_menu--check-dishes-two {
-                    @include card-check;
-                    .fa-circle-check {
-                        color: #FFFFFF;
-                    }
-                }
-                .restaurant__container_menu--check-dishes-three {
-                    @include card-check;
-                    .fa-circle-check {
-                        color: #FFFFFF;
-                    }
-                }
-                .restaurant__container_menu--check-desserts-one {
-                    @include card-check;
-                    .fa-circle-check {
-                        color: #FFFFFF;
-                    }
-                }
-                .restaurant__container_menu--check-desserts-two {
-                    @include card-check;
-                    .fa-circle-check {
-                        color: #FFFFFF;
-                    }
-                }
-                .restaurant__container_menu--check-desserts-three {
-                    @include card-check;
-                    .fa-circle-check {
-                        color: #FFFFFF;
-                    }
-                }
+                
                 .check-on {
                     animation-name: checkon;
                 }

@@ -479,7 +479,7 @@ ul {
   font-weight: 700;
   color: #353535;
 }
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-one {
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-check {
   display: none;
   align-items: center;
   justify-content: center;
@@ -490,119 +490,7 @@ ul {
   border-bottom-right-radius: 15px;
   animation: 0.5s ease-in 0s reverse both running;
 }
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-one .fa-circle-check {
-  color: #FFFFFF;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-two {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: #99E2D0;
-  height: 100%;
-  width: 59px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  animation: 0.5s ease-in 0s reverse both running;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-two .fa-circle-check {
-  color: #FFFFFF;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-three {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: #99E2D0;
-  height: 100%;
-  width: 59px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  animation: 0.5s ease-in 0s reverse both running;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-three .fa-circle-check {
-  color: #FFFFFF;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-dishes-one {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: #99E2D0;
-  height: 100%;
-  width: 59px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  animation: 0.5s ease-in 0s reverse both running;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-dishes-one .fa-circle-check {
-  color: #FFFFFF;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-dishes-two {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: #99E2D0;
-  height: 100%;
-  width: 59px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  animation: 0.5s ease-in 0s reverse both running;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-dishes-two .fa-circle-check {
-  color: #FFFFFF;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-dishes-three {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: #99E2D0;
-  height: 100%;
-  width: 59px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  animation: 0.5s ease-in 0s reverse both running;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-dishes-three .fa-circle-check {
-  color: #FFFFFF;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-one {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: #99E2D0;
-  height: 100%;
-  width: 59px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  animation: 0.5s ease-in 0s reverse both running;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-one .fa-circle-check {
-  color: #FFFFFF;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-two {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: #99E2D0;
-  height: 100%;
-  width: 59px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  animation: 0.5s ease-in 0s reverse both running;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-two .fa-circle-check {
-  color: #FFFFFF;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-three {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: #99E2D0;
-  height: 100%;
-  width: 59px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  animation: 0.5s ease-in 0s reverse both running;
-}
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu--check-desserts-three .fa-circle-check {
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-check .fa-circle-check {
   color: #FFFFFF;
 }
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .check-on {
