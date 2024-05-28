@@ -29,8 +29,20 @@ ul {
   list-style: none;
 }
 
-.fa-solid {
+.fa-xl {
+  font-size: 1.6em;
+  z-index: 100;
+}
+
+.fa {
+  display: none;
   color: #9356DC;
+  position: absolute;
+  left: 290px;
+}
+
+.fa-regular:hover + .fa {
+  display: flex;
 }
 
 .container__header {
@@ -314,6 +326,9 @@ ul {
   .container__restaurants .container__cards-restaurants .card-restaurant-new::before {
     left: 395px;
   }
+  .container__restaurants .container__cards-restaurants .container__presentation-restaurant .fa {
+    left: 445px;
+  }
 }
 
 .container__footer {
@@ -417,6 +432,7 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  position: relative;
 }
 .restaurant__container-menu .restaurant__container-title .restaurant-title {
   font-family: "Shrikhand", serif;
@@ -449,31 +465,32 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  animation: 0.6s ease-in 0s opacity;
 }
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 349px;
   height: 69px;
   border-radius: 15px;
   background: #FFFFFF;
 }
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info {
-  overflow-x: hidden;
-  margin-left: 10px;
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info-price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
 }
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info .restaurant__container_menu-info-title {
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info-price .restaurant__container_menu-info .restaurant__container_menu-info-title {
   font-size: 18px;
 }
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info .restaurant__container_menu-info-txt {
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info-price .restaurant__container_menu-info .restaurant__container_menu-info-txt {
   font-size: 15px;
 }
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-price {
-  margin-right: 10px;
-  margin-left: 30px;
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info-price .restaurant__container_menu-price {
   margin-top: 25px;
   font-size: 15px;
   font-weight: 700;
@@ -488,13 +505,13 @@ ul {
   width: 59px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  animation: 0.5s ease-in 0s reverse both running;
 }
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-check .fa-circle-check {
   color: #FFFFFF;
 }
-.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .check-on {
-  animation-name: checkon;
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card:hover .restaurant__container_menu-check {
+  display: flex;
+  animation: 0.4s ease-in 0s checkon;
 }
 @media screen and (min-width: 1439px) and (max-width: 1920px) {
   .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card {
@@ -523,14 +540,27 @@ ul {
   color: #FFFFFF;
   font-weight: 500;
 }
+.restaurant__container-menu .restaurant__container-menu-link:hover {
+  filter: brightness(1.2);
+}
 @keyframes checkon {
-  from {
-    width: 59px;
-    opacity: 1;
-  }
-  to {
+  0% {
     width: 0;
-    opacity: 0;
+    opacity: 0%;
+  }
+  100% {
+    width: 59px;
+    opacity: 100%;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+    scale: 0;
+  }
+  100% {
+    opacity: 100%;
+    scale: 1;
   }
 }
 
