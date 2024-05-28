@@ -76,14 +76,26 @@ ul {
     font-size: 1.6em;
     z-index: 100;
 }
+.fa-index {
+    left: 290px;
+}
+.fa-palette {
+    left: 290px;
+}
+.fa-delice {
+    left: 281px;
+}
 .fa {
     display: none;
     color: $main-color;
     position: absolute;
-    left: 290px;
 }
 .fa-regular:hover + .fa {
     display: flex;
+    z-index: 99;
+}
+.fa-regular:hover {
+    opacity: 0;
 }
 
 //********** Header **********//

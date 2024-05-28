@@ -34,15 +34,31 @@ ul {
   z-index: 100;
 }
 
+.fa-index {
+  left: 290px;
+}
+
+.fa-palette {
+  left: 290px;
+}
+
+.fa-delice {
+  left: 281px;
+}
+
 .fa {
   display: none;
   color: #9356DC;
   position: absolute;
-  left: 290px;
 }
 
 .fa-regular:hover + .fa {
   display: flex;
+  z-index: 99;
+}
+
+.fa-regular:hover {
+  opacity: 0;
 }
 
 .container__header {
