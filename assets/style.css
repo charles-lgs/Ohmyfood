@@ -46,6 +46,10 @@ ul {
   left: 281px;
 }
 
+.fa-enchantee {
+  left: 296px;
+}
+
 .fa {
   display: none;
   color: #9356DC;
@@ -385,11 +389,11 @@ ul {
 
 .restaurant__main-container {
   max-width: 375px;
+  width: 100%;
 }
 @media screen and (min-width: 377px) and (max-width: 1920px) {
   .restaurant__main-container {
     max-width: 1440px;
-    width: 100%;
   }
 }
 
