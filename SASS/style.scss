@@ -11,6 +11,7 @@ $secondary-font-family: "Shrikhand", serif;
 
 $background: #F6F6F6;
 $main-color: #9356DC;
+$pink-color: #FF79DA;
 $dark-grey-color: #353535;
 $grey-color: #7E7E7E;
 $light-grey-color: #EAEAEA;
@@ -222,7 +223,7 @@ $loader-direction: normal;
     0% { background: $main-color;}
   25% { background: $light-green-color;}
   50% { background: $main-color;}
-  75% { background: $light-green-color;}
+  75% { background: $pink-color;}
   100% { background: $main-color;}
 }
 
@@ -652,11 +653,16 @@ $loader-direction: normal;
                     padding: 10px;
                     
                     .restaurant__container_menu-info {
-                        
+                        height: 43px;
+
                         .restaurant__container_menu-info-title {
+                            overflow: hidden;
+                            height: 22px;
                             font-size: 18px;
                         }
                         .restaurant__container_menu-info-txt {
+                            overflow: hidden;
+                            height: 18px;
                             font-size: 15px;
                         }
                     }

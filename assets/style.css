@@ -272,7 +272,7 @@ svg:hover .heart {
     background: #9356DC;
   }
   75% {
-    background: #99E2D0;
+    background: #FF79DA;
   }
   100% {
     background: #9356DC;
@@ -730,10 +730,17 @@ svg:hover .heart {
   overflow: hidden;
   padding: 10px;
 }
+.restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info-price .restaurant__container_menu-info {
+  height: 43px;
+}
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info-price .restaurant__container_menu-info .restaurant__container_menu-info-title {
+  overflow: hidden;
+  height: 22px;
   font-size: 18px;
 }
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info-price .restaurant__container_menu-info .restaurant__container_menu-info-txt {
+  overflow: hidden;
+  height: 18px;
   font-size: 15px;
 }
 .restaurant__container-menu .restaurant__container_menu-all .restaurant__container_menu-all-cards .restaurant__container_menu-card .restaurant__container_menu-info-price .restaurant__container_menu-price {
