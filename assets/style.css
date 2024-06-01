@@ -32,44 +32,17 @@ ul {
   list-style: none;
 }
 
-.fa-xl {
-  font-size: 1.6em;
-  z-index: 100;
+.heart {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+  transition: fill 0.3s;
+  z-index: 10;
 }
 
-.fa-index {
-  left: 290px;
-}
-
-.fa-palette {
-  left: 290px;
-}
-
-.fa-delice {
-  left: 281px;
-}
-
-.fa-enchantee {
-  left: 296px;
-}
-
-.fa-francaise {
-  left: 231px;
-}
-
-.fa {
-  display: none;
-  color: #9356DC;
-  position: absolute;
-}
-
-.fa-regular:hover + .fa {
-  display: flex;
-  z-index: 99;
-}
-
-.fa-regular:hover {
-  opacity: 0;
+svg:hover .heart {
+  stroke: none;
+  fill: url(#gradient2);
 }
 
 .loader-background {
@@ -114,7 +87,7 @@ ul {
   height: 0.25em;
   width: 1em;
   border-radius: 50%;
-  background-color: #240d3f;
+  background-color: black;
   opacity: 0.3;
 }
 
@@ -142,8 +115,9 @@ ul {
   display: block;
   width: 15px;
   height: 15px;
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background: #9356DC;
   border-radius: 50%;
+  animation: 3s 0s backgroundcolor;
 }
 
 @keyframes rollercoaster {
@@ -285,6 +259,23 @@ ul {
   100% {
     opacity: 0;
     z-index: -1;
+  }
+}
+@keyframes backgroundcolor {
+  0% {
+    background: #9356DC;
+  }
+  25% {
+    background: #99E2D0;
+  }
+  50% {
+    background: #9356DC;
+  }
+  75% {
+    background: #99E2D0;
+  }
+  100% {
+    background: #9356DC;
   }
 }
 #loader2:after {

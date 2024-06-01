@@ -76,36 +76,16 @@ a {
 ul {
     list-style: none;
 }
-.fa-xl {
-    font-size: 1.6em;
-    z-index: 100;
+.heart {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+    transition: fill 0.3s;
+    z-index: 10;
 }
-.fa-index {
-    left: 290px;
-}
-.fa-palette {
-    left: 290px;
-}
-.fa-delice {
-    left: 281px;
-}
-.fa-enchantee {
-    left: 296px;
-}
-.fa-francaise {
-    left: 231px;
-}
-.fa {
-    display: none;
-    color: $main-color;
-    position: absolute;
-}
-.fa-regular:hover + .fa {
-    display: flex;
-    z-index: 99;
-}
-.fa-regular:hover {
-    opacity: 0;
+svg:hover .heart {
+    stroke: none;
+    fill: url(#gradient2);
 }
 
 //********** Loader **********//
@@ -155,7 +135,7 @@ $loader-direction: normal;
     height: .25em;
     width: 1em;
     border-radius: 50%;
-    background-color: darken($main-color, 45%);
+    background-color: darken(black, 45%);
     opacity: 0.3;
   }
 }
@@ -181,8 +161,9 @@ $loader-direction: normal;
     display:block;
     width: 15px;
     height: 15px;
-    background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    background: $main-color;
     border-radius: 50%;
+    animation: 3s 0.0s backgroundcolor;
 }
 
 @keyframes rollercoaster {
@@ -235,6 +216,14 @@ $loader-direction: normal;
   75% { opacity: 1; z-index: 200;}
   90% { opacity: 1; z-index: 200;}
   100% { opacity: 0; z-index: -1;}
+}
+
+@keyframes backgroundcolor {
+    0% { background: $main-color;}
+  25% { background: $light-green-color;}
+  50% { background: $main-color;}
+  75% { background: $light-green-color;}
+  100% { background: $main-color;}
 }
 
 #loader2 {
