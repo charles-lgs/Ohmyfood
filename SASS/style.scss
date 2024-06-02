@@ -87,6 +87,12 @@ ul {
 svg:hover .heart {
     stroke: none;
     fill: url(#gradient2);
+    fill: url(#gradient3);
+    fill: url(#gradient4);
+    fill: url(#gradient5);
+    fill: url(#gradient);
+    // fill: url(#gradient7);
+    // fill: url(#gradient8);
 }
 
 //********** Loader **********//
@@ -796,6 +802,9 @@ $loader-direction: normal;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 
+    @media screen and (min-width: 376px) and (max-width: 1438px) {
+        width: 100%;
+    }
     @media screen and (min-width: 1439px) and (max-width: 1920px) {
         width: 1055px;
     }
