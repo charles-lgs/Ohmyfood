@@ -91,8 +91,6 @@ svg:hover .heart {
     fill: url(#gradient4);
     fill: url(#gradient5);
     fill: url(#gradient);
-    // fill: url(#gradient7);
-    // fill: url(#gradient8);
 }
 
 //********** Loader **********//
@@ -490,9 +488,6 @@ $loader-direction: normal;
             .card-restaurant-new::before {
                 left: 395px;
             }
-            .container__presentation-restaurant .fa {
-                left: 445px;
-            }
         }
     }
 }
@@ -653,30 +648,40 @@ $loader-direction: normal;
 
                 .restaurant__container_menu-info-price {
                     display: flex;
-                    justify-content: space-between;
+                    flex-direction: column;
                     width: 100%;
                     overflow: hidden;
                     padding: 10px;
                     
                     .restaurant__container_menu-info {
-                        height: 43px;
 
                         .restaurant__container_menu-info-title {
-                            overflow: hidden;
                             height: 22px;
                             font-size: 18px;
-                        }
-                        .restaurant__container_menu-info-txt {
+                            white-space: nowrap;
                             overflow: hidden;
-                            height: 18px;
-                            font-size: 15px;
+                            text-overflow: ellipsis;
                         }
                     }
                     .restaurant__container_menu-price {
-                        margin-top: 25px;
-                        font-size: 15px;
-                        font-weight: 700;
-                        color: $dark-grey-color;
+                        display: flex;
+                        justify-content: space-between;
+                        
+
+                        .restaurant__container_menu-info-txt {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            height: 18px;
+                            max-width: 285px;
+                            font-size: 15px;
+                        }
+                        .info-price {
+                            margin-left: 15px;
+                            font-size: 15px;
+                            font-weight: 700;
+                            color: $dark-grey-color;
+                        }
                     }
                 }
 
